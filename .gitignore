@@ -1,0 +1,9 @@
+.DS_Store
+
+/vendor/bundle/**/*
+
+/tmp/**/*
+
+/config/secrets.yml
+
+/bin/**/*
