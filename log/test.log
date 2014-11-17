@@ -1,0 +1,821 @@
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ListingGemsTest: test_listing_gems
+----------------------------------
+Started GET "/gems" for 127.0.0.1 at 2014-11-13 17:21:03 -0800
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ListingGemsTest: test_listing_gems
+----------------------------------
+Started GET "/gems" for 127.0.0.1 at 2014-11-13 17:24:17 -0800
+Processing by GemsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141114013007')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-14 01:36:32.033820"], ["rating", 10], ["title", "Adamantium"], ["updated_at", "2014-11-14 01:36:32.033820"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-14 01:36:32.079685"], ["rating", 5], ["title", "Platinum"], ["updated_at", "2014-11-14 01:36:32.079685"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/products" for 127.0.0.1 at 2014-11-13 17:36:32 -0800
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-14 01:37:31.714552"], ["rating", 10], ["title", "Adamantium"], ["updated_at", "2014-11-14 01:37:31.714552"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-14 01:37:31.718187"], ["rating", 5], ["title", "Platinum"], ["updated_at", "2014-11-14 01:37:31.718187"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/products" for 127.0.0.1 at 2014-11-13 17:37:31 -0800
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141114013007')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-14 01:38:51.689167"], ["rating", 10], ["title", "Adamantium"], ["updated_at", "2014-11-14 01:38:51.689167"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-14 01:38:51.693264"], ["rating", 5], ["title", "Platinum"], ["updated_at", "2014-11-14 01:38:51.693264"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/products" for 127.0.0.1 at 2014-11-13 17:38:51 -0800
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[36m (5.8ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141114013007')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-14 01:41:00.603306"], ["rating", 10], ["title", "Adamantium"], ["updated_at", "2014-11-14 01:41:00.603306"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-14 01:41:00.608274"], ["rating", 5], ["title", "Platinum"], ["updated_at", "2014-11-14 01:41:00.608274"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/products" for 127.0.0.1 at 2014-11-13 17:41:00 -0800
+Processing by ProductsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-14 01:42:17.400498"], ["rating", 10], ["title", "Adamantium"], ["updated_at", "2014-11-14 01:42:17.400498"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("created_at", "rating", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-14 01:42:17.404340"], ["rating", 5], ["title", "Platinum"], ["updated_at", "2014-11-14 01:42:17.404340"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/products" for 127.0.0.1 at 2014-11-13 17:42:17 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36m (53.3ms)[0m  [1mrollback transaction[0m
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "shine" integer, "price" float, "rarity" integer, "color" varchar(255), "faces" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (29.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141114013007')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 18:54:13 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 18:54:40 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 18:55:18 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 18:56:01 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 18:57:37 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 19:00:29 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 19:03:57 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 19:13:26 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 19:17:54 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (5.5ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "shine" integer, "price" float, "rarity" integer, "color" varchar(255), "faces" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141114013007')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 19:19:48 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (5.8ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "shine" integer, "price" float, "rarity" integer, "color" varchar(255), "faces" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141114013007')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 03:29:11', '2014-11-14 03:29:11')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 03:29:11', '2014-11-14 03:29:11')[0m
+  [1m[35m (5.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 19:29:11 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "shine" integer, "price" float, "rarity" integer, "color" varchar(255), "faces" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141114013007')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 03:32:14', '2014-11-14 03:32:14')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 03:32:14', '2014-11-14 03:32:14')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 19:32:14 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 03:37:59', '2014-11-14 03:37:59')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 03:37:59', '2014-11-14 03:37:59')[0m
+  [1m[35m (103.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 19:37:59 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 03:43:40', '2014-11-14 03:43:40')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 03:43:40', '2014-11-14 03:43:40')[0m
+  [1m[35m (7.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------
+ProductTest: test_listing_products
+----------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 19:43:40 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:05:29', '2014-11-14 04:05:29')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:05:29', '2014-11-14 04:05:29')
+  [1m[36m (70.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:05:29 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:06:40', '2014-11-14 04:06:40')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:06:40', '2014-11-14 04:06:40')
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:06:40 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:07:54', '2014-11-14 04:07:54')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:07:54', '2014-11-14 04:07:54')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:07:54 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:09:41', '2014-11-14 04:09:41')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:09:41', '2014-11-14 04:09:41')
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:09:41 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:16:22', '2014-11-14 04:16:22')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:16:22', '2014-11-14 04:16:22')
+  [1m[36m (19.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:16:22 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:24:12', '2014-11-14 04:24:12')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:24:12', '2014-11-14 04:24:12')
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:24:12 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:26:28', '2014-11-14 04:26:28')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:26:28', '2014-11-14 04:26:28')
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:26:28 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:27:36', '2014-11-14 04:27:36')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:27:36', '2014-11-14 04:27:36')
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:27:36 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:27:56', '2014-11-14 04:27:56')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:27:56', '2014-11-14 04:27:56')
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:27:56 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:32:49 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:36:42', '2014-11-14 04:36:42')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:36:42', '2014-11-14 04:36:42')
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:36:42 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (24.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (15.6ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 04:52:07', '2014-11-14 04:52:07')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 04:52:07', '2014-11-14 04:52:07')
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 20:52:07 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (1, 'Adamantium', 'The hardest metal known to man, attached to Wolverine''s bones!', 4, 1399.99, 10, '#CCC', 2, '2014-11-14 05:11:17', '2014-11-14 05:11:17')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("id", "name", "description", "shine", "price", "rarity", "color", "faces", "created_at", "updated_at") VALUES (2, 'Platinum', 'Yeah, whatever it''s still not Adamantium.', 8, 999.99, 7, '#CCC', 4, '2014-11-14 05:11:17', '2014-11-14 05:11:17')
+  [1m[36m (32.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-13 21:11:17 -0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (8.5ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (64.4ms)[0m  [1mDROP TABLE "products"[0m
+  [1m[35m (22.7ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "shine" integer, "price" float, "rarity" integer, "color" varchar(255), "faces" integer, "category_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141115031809')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+Started GET "/products" for 127.0.0.1 at 2014-11-17 12:37:51 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:38:53.060780"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:38:53.060780"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:38:53.064509"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:38:53.064509"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:38:53.077503"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:38:53.077503"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:38:53.079813"], ["description", "It's still not as cool as Adamantium"], ["faces", 2], ["name", "Platinum"], ["price", 999.99], ["rarity", 8], ["shine", 5], ["updated_at", "2014-11-17 20:38:53.079813"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products" for 127.0.0.1 at 2014-11-17 12:38:53 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (12.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:39:16.533465"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:39:16.533465"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:39:16.537247"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:39:16.537247"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:39:16.548493"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:39:16.548493"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:39:16.550295"], ["description", "It's still not as cool as Adamantium"], ["faces", 2], ["name", "Platinum"], ["price", 999.99], ["rarity", 8], ["shine", 5], ["updated_at", "2014-11-17 20:39:16.550295"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products" for 127.0.0.1 at 2014-11-17 12:39:16 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:41:16.634609"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:41:16.634609"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:41:16.638514"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:41:16.638514"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:41:16.650721"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:41:16.650721"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:41:16.652242"], ["description", "It's still not as cool as Adamantium"], ["faces", 2], ["name", "Platinum"], ["price", 999.99], ["rarity", 8], ["shine", 5], ["updated_at", "2014-11-17 20:41:16.652242"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products" for 127.0.0.1 at 2014-11-17 12:41:16 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:47:15.295715"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:47:15.295715"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:47:15.299729"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:47:15.299729"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:47:15.311874"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:47:15.311874"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:47:15.313398"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:47:15.313398"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products" for 127.0.0.1 at 2014-11-17 12:47:15 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+Products: test_0002_should return only products of selected id
+--------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:47:15.334145"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:47:15.334145"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:47:15.336043"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:47:15.336043"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:47:15.338166"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:47:15.338166"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:47:15.340231"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:47:15.340231"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products?category_id=1" for 127.0.0.1 at 2014-11-17 12:47:15 -0800
+Processing by ProductsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:49:53.681142"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:49:53.681142"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:49:53.685550"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:49:53.685550"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:49:53.697706"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:49:53.697706"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:49:53.699260"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:49:53.699260"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products" for 127.0.0.1 at 2014-11-17 12:49:53 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+Products: test_0002_should return only products of selected id
+--------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:49:53.724880"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:49:53.724880"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:49:53.726895"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:49:53.726895"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:49:53.728333"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:49:53.728333"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:49:53.729545"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:49:53.729545"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products?category_id=1" for 127.0.0.1 at 2014-11-17 12:49:53 -0800
+Processing by ProductsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:50:06.116724"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:50:06.116724"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:50:06.121099"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:50:06.121099"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:50:06.136592"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:50:06.136592"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:50:06.139105"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:50:06.139105"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products" for 127.0.0.1 at 2014-11-17 12:50:06 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+Products: test_0002_should return only products of selected id
+--------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:50:06.159184"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:50:06.159184"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:50:06.160361"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:50:06.160361"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:50:06.161791"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:50:06.161791"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:50:06.162999"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:50:06.162999"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products?category_id=1" for 127.0.0.1 at 2014-11-17 12:50:06 -0800
+Processing by ProductsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:50:55.832183"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:50:55.832183"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:50:55.836115"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:50:55.836115"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:50:55.847964"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:50:55.847964"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:50:55.849624"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:50:55.849624"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products" for 127.0.0.1 at 2014-11-17 12:50:55 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+Products: test_0002_should return only products of selected id
+--------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:50:55.869205"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:50:55.869205"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:50:55.871158"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:50:55.871158"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:50:55.872670"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:50:55.872670"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:50:55.873878"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:50:55.873878"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products?category_id=1" for 127.0.0.1 at 2014-11-17 12:50:55 -0800
+Processing by ProductsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  WHERE "products"."category_id" = 1
+Completed 200 OK in 44ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Products: test_0001_should connect to product api
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:52:12.842976"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:52:12.842976"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:52:12.846975"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:52:12.846975"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:52:12.858654"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:52:12.858654"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:52:12.860221"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:52:12.860221"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products" for 127.0.0.1 at 2014-11-17 12:52:12 -0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------
+Products: test_0002_should return only products of selected id
+--------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 20:52:12.879157"], ["id", 1], ["name", "metals"], ["updated_at", "2014-11-17 20:52:12.879157"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "id", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-17 20:52:12.880322"], ["id", 2], ["name", "gems"], ["updated_at", "2014-11-17 20:52:12.880322"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["color", "#CCC"], ["created_at", "2014-11-17 20:52:12.881613"], ["description", "The hardest metal known to man, attached to Wolverine's bones!"], ["faces", 2], ["name", "Adamantium"], ["price", 1399.99], ["rarity", 10], ["shine", 4], ["updated_at", "2014-11-17 20:52:12.881613"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("category_id", "color", "created_at", "description", "faces", "name", "price", "rarity", "shine", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["color", "#CCC"], ["created_at", "2014-11-17 20:52:12.882972"], ["description", "It's still not as cool as Adamantium"], ["faces", 9], ["name", "Diamond"], ["price", 999.99], ["rarity", 8], ["shine", 10], ["updated_at", "2014-11-17 20:52:12.882972"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/products?category_id=1" for 127.0.0.1 at 2014-11-17 12:52:12 -0800
+Processing by ProductsController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"  WHERE "products"."category_id" = 1
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
