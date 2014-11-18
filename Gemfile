@@ -10,6 +10,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 
+<<<<<<< HEAD
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'spring', group: :development
@@ -24,3 +25,10 @@ group :production do
 end
 
 ruby '2.1.2'
+=======
+gem 'sdoc', '~> 0.4.0',          group: :doc
+
+gem 'spring',        group: :development
+
+
+>>>>>>> 3a3c33da21b8b6bf5c1df80eb4605b466cd00707
