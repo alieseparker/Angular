@@ -4,6 +4,8 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 task default: 'test:run'
 
@@ -12,3 +14,7 @@ Rake::Task['test:run'].enhance ['test:features']
 Rails::TestTask.new('test:features' => 'test:prepare') do |t|
   t.pattern = 'test/**/**/**_test.rb'
 end
+=======
+>>>>>>> 3a3c33da21b8b6bf5c1df80eb4605b466cd00707
+=======
+>>>>>>> 3a3c33da21b8b6bf5c1df80eb4605b466cd00707

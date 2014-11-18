@@ -7,8 +7,6 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
-
-  # Add more helper methods to be used by all tests here...
   def json(body)
     JSON.parse(body, symbolize_names: true)
   end

@@ -1,3 +1,4 @@
+
 Category.create!( id: 1, name: 'metals')
 Category.create!( id: 2, name: 'gems')
 
@@ -13,6 +14,7 @@ Product.create!(
 )
 
 Product.create!(
+
   name: "Bloodstone",
   description: "Origin of the Bloodstone is unknown, hence its low value. It has a very high shine and 12 sides, however.",
   shine: 9,
@@ -33,5 +35,3 @@ Product.create!(
   faces: 6,
   category_id: 2,
 )
-
-
