@@ -1,21 +1,37 @@
 
 Category.create!( id: 1, name: 'metals')
 Category.create!( id: 2, name: 'gems')
+
 Product.create!(
-  name: "Adamantium",
-  description: "The hardest metal known to man, attached to Wolverine's bones!",
-  shine: 4,
-  price: 1399.99,
-  rarity: 10,
-  color: '#CCC',
-  faces: 2,
-  category_id: "1" )
+  name: "Azurite",
+  description: "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
+  shine: 8,
+  price: 110.50,
+  rarity: 7,
+  color: "#CCC",
+  faces: 14,
+  category_id: 2,
+)
+
 Product.create!(
-  name: "Platinum",
-  description: "It's still not as cool as Adamantium",
-  shine: 5,
-  price: 999.99,
-  rarity: 8,
-  color: '#CCC',
-  faces: 2,
-  category_id: "1" )
+
+  name: "Bloodstone",
+  description: "Origin of the Bloodstone is unknown, hence its low value. It has a very high shine and 12 sides, however.",
+  shine: 9,
+  price: 22.90,
+  rarity: 6,
+  color: "#EEE",
+  faces: 11,
+  category_id: 2,
+)
+
+Product.create!(
+  name: "Zircon",
+  description: "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+  shine: 70,
+  price: 1100,
+  rarity: 2,
+  color: "#000",
+  faces: 6,
+  category_id: 2,
+)

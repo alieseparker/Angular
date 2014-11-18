@@ -8,6 +8,6 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
   def json(body)
-    JSON.parse(body)
+    JSON.parse(body, symbolize_names: true)
   end
 end

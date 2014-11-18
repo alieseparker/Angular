@@ -9,6 +9,8 @@ class CreateProducts < ActiveRecord::Migration
       t.string :color
       t.integer :faces
       t.integer :category_id
+      t.string :images
+      t.text :reviews
 
       t.timestamps
     end

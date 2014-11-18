@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20141115031809) do
     t.string   "color"
     t.integer  "faces"
     t.integer  "category_id"
+    t.string   "images"
+    t.text     "reviews"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
