@@ -5,7 +5,7 @@
     var store = this;
     store.products = [];
 
-    $http.get('/gemStore/store-products.json').success(function(data){
+    $http.get('/products').success(function(data){
       store.products = data;
     });
   }]);
