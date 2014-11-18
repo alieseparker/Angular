@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Category.create!( id: 1, name: 'metals')
 Category.create!( id: 2, name: 'gems')
 Product.create!(
@@ -19,13 +19,3 @@ Product.create!(
   color: '#CCC',
   faces: 2,
   category_id: "1" )
-
-=======
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
->>>>>>> 3a3c33da21b8b6bf5c1df80eb4605b466cd00707
